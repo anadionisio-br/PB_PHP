@@ -7,8 +7,8 @@
     <body>
         <a href='/PB_PHP/MVCexemplo/usuario/listar'>Ir para tela - Listar</a>
         <form method="POST" action="salvar">
-            <input type="text" name="nome" placeholder="Seu nome" require>
-            <input type="text" name="email" placeholder="Seu email" require>
+            <input type="text" name="nome" placeholder="Seu nome" require><br><br>
+            <input type="text" name="email" placeholder="Seu email" require><br><br>
             <button type="submit">Enviar</button>
         </form>   
     </body>
