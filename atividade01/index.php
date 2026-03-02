@@ -26,6 +26,10 @@ switch ($route){
         $produtoController->atualizar();
         break;
 
+    case "produto/excluir":
+        $produtoController->excluir();
+        break;
+        
     default:
         echo "Página não encontrada";
         break;

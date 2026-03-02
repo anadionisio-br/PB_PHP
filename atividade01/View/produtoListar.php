@@ -24,6 +24,7 @@
                 <td><?= $u['dataValidade']?></td> 
                 <td>
                     <a href="/PB_PHP/atividade01/produto/telaEditar?id=<?= $id ?>"> Editar </a>
+                    <a href="/PB_PHP/atividade01/produto/excluir?id=<?= $id ?>">Excluir </a>
                 </td>
             </tr>
         <?php endforeach ?>

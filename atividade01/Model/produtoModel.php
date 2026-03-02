@@ -46,4 +46,10 @@ class Produto{
             ];
         }
     }
+
+    public static function excluir($id){
+        if(isset($_SESSION['produtos'][$id])){ //verifica se o usuario existe
+            unset($_SESSION['produtos'][$id]); //remove o usuario
+        }
+    }
 }

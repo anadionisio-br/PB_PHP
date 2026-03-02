@@ -31,15 +31,21 @@ class ProdutoController{
         require 'View/produtoListar.php';
     }
 
-        public function telaEditar(){
+    public function telaEditar(){
         $produto = produto::buscar($_GET['id']);//busco se quiser cadastrar - GET mostra id na URL
         require 'View/produtoEditar.php';
     }
 
-        public function atualizar(){
+    public function atualizar(){
         $produto = new Produto($_POST['nome'], $_POST['valor'], $_POST['quantidade'], $_POST['dataValidade']);
         $produto->atualizar($_GET['id']);
         header('Location: /PB_PHP/atividade01/produto/telaEditar?id='.($_GET['id']));
+        exit;
+    }
+
+    public function excluir(){
+        Produto::excluir($_GET['id']);
+        header('Location: /PB_PHP/atividade01/produto/listar');
         exit;
     }
 }
